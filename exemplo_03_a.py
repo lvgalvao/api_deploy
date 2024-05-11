@@ -8,4 +8,4 @@ servidor = FastAPI()
 def numero_aleatorio() -> int:
     num = random.randint(1,60)
     print(num)
-    return num
+    return {"data": num}
