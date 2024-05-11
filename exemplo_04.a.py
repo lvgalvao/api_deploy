@@ -5,6 +5,12 @@ from fastapi.responses import JSONResponse
 
 servidor = FastAPI()
 
+@servidor.get('/recurso')
+def numero_aleatorio() -> int:
+    num = random.randint(1,60)
+    print(num)
+    return num
+
 @servidor.get('/recursos')
 def numero_aleatorio() -> JSONResponse:
     num = random.randint(1,60)
